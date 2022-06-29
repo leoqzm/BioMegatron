@@ -10,8 +10,15 @@ import torch
 print(torch.__version__)
 
 ```
-to check pytorch binary file is compiled under the right cuda version, or apex will build failed because of this problem.
-
+to check pytorch binary file is compiled under the right cuda version, or apex will build failed because of this problem. I used 
+```
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Mon_May__3_19:15:13_PDT_2021
+Cuda compilation tools, release 11.3, V11.3.109
+Build cuda_11.3.r11.3/compiler.29920130_0
+torch version = 1.11.0+cu113
+```
 Then we need to run the code block
 ```
 !git clone https://github.com/NVIDIA/apex
