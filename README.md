@@ -2,7 +2,7 @@
 Rebuild biomegatron tutorial
 ## 1. Token Classification 
 In the ```Token_Classification_BioMegatron.ipynb ``` notebook, it shows an example for how BioMegatron model train and inference a named-entity recoganization task.
-###environment set up
+### a. environment set up
 For running the notebook by ourselves in google colab, we first need to use 
 ```
 !nvcc --version
@@ -41,7 +41,7 @@ from omegaconf import OmegaConf
 
 Then the notebook will run correctly.
 ###
-### Directory Set Up
+### b. Directory Set Up
 For convinient to save checkpoints or results, I linked the colab with google drive, and changed directory path with the google drive directory.
 
 To mount with google drive:
@@ -67,7 +67,7 @@ In your process, you can change your ```MAIN_DIR``` to your preferred directory 
 MAIN_DIR = 'YOUR_PATH_TO_DIRECTORY'
 ```
 ###
-### Input Output Example
+### c. Input Output Example
 The task is a simplified task from the simplified NCBI disease dataset. Which the input was supposed to be
 ``` HTML
 <category = "Modifier">adenomatous polyposis coli tumour</category>
@@ -91,7 +91,7 @@ The output also become in a same tagging way with IOB tagging.
 
 ## 2. Relation Extraction
 In the ```Relation_Extraction_BioMegatron.ipynb ``` notebook, it shows an example for how BioMegatron model train and inference a named-entity recoganization task.
-### environment set up
+### a. environment set up
 For running the notebook by ourselves in google colab, we first need to use 
 ```
 !nvcc --version
@@ -130,7 +130,7 @@ from omegaconf import OmegaConf
 
 Then the notebook will run correctly.
 ###
-### Directory Set Up
+### b. Directory Set Up
 For convinient to save checkpoints or results, I linked the colab with google drive, and changed directory path with the google drive directory.
 
 To mount with google drive:
@@ -157,7 +157,7 @@ MAIN_DIR = 'YOUR_PATH_TO_DIRECTORY'
 ```
 ###
 
-### Epoch edited
+### c. Epoch edited
 After the environment and directory built, the training epoch number in model config also need to be edited.
 I add a line in Model Configuration block
 
@@ -167,7 +167,7 @@ config.trainer.max_epochs=3
 which set max training epoch to be 3, the original 100 epoch is needless because too much epoch will lead overfitting
 ###
 
-### Input Output Example
+### d. Input Output Example
 The task is to classify the relation of a [GENE] and [CHEMICAL] in a sentence from [BioCreative VI website](https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/), for example like the following:
 ```html
 14967461.T1.T22	<@CHEMICAL$> inhibitors currently under investigation include the small molecules <@GENE$> (Iressa, ZD1839) and erlotinib (Tarceva, OSI-774), as well as monoclonal antibodies such as cetuximab (IMC-225, Erbitux).	<CPR:4>
@@ -200,7 +200,7 @@ CPR:3	5
 ```
 
 ###
-### Evaluation Set up
+### e. Evaluation Set up
 In the original notebook, it does not have the test evalution part for the model. 
 I add the evaluation part with these line of codes:
 
