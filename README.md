@@ -86,6 +86,19 @@ O              O  O    O O O         O  O   B           I         I    I      O 
 
 The output also become in a same tagging way with IOB tagging.
 ###
+
+### Different fine-tine model results
+
+| Model Name | Accuracy | Weighted Precision | MacroAve Precision | Recall | 
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| BioMegatron_30K_uncased | 0.9909 | 0.9915 | 0.9317 | 0.9756 |
+| BioMegatron_30K_cased | 0.9913 | 0.9918 | 0.9358 | 0.9722 |
+| BioMegatron_50K_uncased | 0.9905 | 0.9906 | 0.9454 | 0.9598 |
+| BioMegatron_50K_cased | 0.9889 | 0.9898 | 0.9219 | 0.9748 |
+| BioMegatron_Bert_uncased | 0.9889 | 0.9898 | 0.9161 | 0.9661 |
+| BioMegatron_Bert_cased | 0.9893 | 0.9901 | 0.9211 | 0.9662 |
+| Megatron_Bert_uncased | 0.9893 | 0.9901 | 0.9211 | 0.9662 |
+| Megatron_Bert_cased | 0.9881 | 0.9889 | 0.9216 | 0.9667 |
 ##
 
 
